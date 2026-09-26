@@ -62,7 +62,7 @@ window.addEventListener("scroll", () => {
 
 const reveals = document.querySelectorAll(
 
-    ".service-card, .why-card, .project-card, .testimonial-card, .step, .contact-card"
+    ".service-card, .pricing-card, .why-card, .project-card, .testimonial-card, .step, .contact-card"
 );
 
 function revealElements() {
@@ -198,3 +198,4 @@ console.log(
 );
 
 console.log("Designed & Developed by Framework Studio.");
+

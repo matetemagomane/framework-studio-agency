@@ -237,6 +237,127 @@ nav ul {
 
 
 /* ===========================
+   PRICING
+=========================== */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.pricing-card {
+    position: relative;
+    background: #141414;
+    border: 1px solid #242424;
+    border-radius: 20px;
+    padding: 45px 35px;
+    text-align: center;
+    transition: .35s;
+}
+
+    .pricing-card:hover {
+        transform: translateY(-8px);
+        border-color: #caa85c;
+    }
+
+    .pricing-card.featured {
+        border-color: #caa85c;
+        background: #1a1710;
+        transform: scale(1.04);
+    }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.04) translateY(-8px);
+        }
+
+    .pricing-badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #caa85c;
+        color: #000;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 6px 18px;
+        border-radius: 50px;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .pricing-tag {
+        display: block;
+        color: #9a9a9a;
+        font-size: .85rem;
+        margin-bottom: 20px;
+    }
+
+    .pricing-card .price {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #caa85c;
+        margin-bottom: 25px;
+    }
+
+        .pricing-card .price small {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #bdbdbd;
+        }
+
+    .pricing-list {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+        .pricing-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #bdbdbd;
+            padding: 8px 0;
+            border-bottom: 1px solid #1f1f1f;
+            font-size: .92rem;
+        }
+
+        .pricing-list li i {
+            color: #caa85c;
+        }
+
+    .pricing-card .primary,
+    .pricing-card .secondary {
+        width: 100%;
+    }
+
+.pricing-note {
+    text-align: center;
+    color: #9a9a9a;
+    font-size: .9rem;
+    margin-top: 40px;
+}
+
+@media(max-width:992px) {
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-8px);
+        }
+
+}
+
+
+/* ===========================
    WHY US
 =========================== */
 
@@ -571,6 +692,7 @@ footer {
     }
 
 .service-card,
+.pricing-card,
 .why-card,
 .project-card,
 .testimonial-card,
@@ -582,6 +704,7 @@ footer {
 }
 
 .service-card.show,
+.pricing-card.show,
 .why-card.show,
 .project-card.show,
 .testimonial-card.show,
